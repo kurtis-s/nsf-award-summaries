@@ -18,5 +18,4 @@ grant_data['grant_amt_thousands'] = [int(amt.strip().strip('$').replace(',', '')
 grant_frame = pd.DataFrame.from_dict(grant_data)
 grant_frame.set_index(['institution'], inplace=True)
 
-grant_frame.to_json(os.path.join(args.outputdir, 'grants.json'))
-grant_frame.to_csv(os.path.join(args.outputdir, 'grants.csv'))
+grant_frame.to_pickle(os.path.join(args.outputdir, 'grants_not_geocoded.pkl'))

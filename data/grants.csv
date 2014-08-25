@@ -1,51 +1,51 @@
-institution,grant_amt_thousands,state_or_country
-LOCKHEED MARTIN CORPORATION,156067,Maryland
-"Consortium for Ocean Leadership, Inc",155565,District of Columbia
-University of Illinois at Urbana-Champaign,153120,Illinois
-University Corporation For Atmospheric Res,121958,Colorado
-Cornell University,118327,New York
-University of California-Berkeley,103897,California
-University of Wisconsin-Madison,101973,Wisconsin
-University of Washington,96108,Washington
-University of Michigan Ann Arbor,94272,Michigan
-California Institute of Technology,88334,California
-"National Ecological Observatory Network, Inc",87291,Colorado
-Department of Defense,87212,California
-Purdue University,83139,Indiana
-Columbia University,82143,New York
-Carnegie-Mellon University,76082,Pennsylvania
-University of California-San Diego,75455,California
-Associated Universities Inc/National Radio Astronomy Observatory,73920,Virginia
-Michigan State University,73417,Michigan
-University of Colorado at Boulder,73008,Colorado
-Massachusetts Institute of Technology,72252,Massachusetts
-University of Minnesota-Twin Cities,71680,Minnesota
-Georgia Tech Research Corporation,71260,Georgia
-Woods Hole Oceanographic Institution,69408,Massachusetts
-University of California-Los Angeles,69004,California
-University of Arizona,67940,Arizona
-Stanford University,66113,California
-Harvard University,62305,Massachusetts
-University of Texas at Austin,61585,Texas
-Pennsylvania State Univ University Park,61325,Pennsylvania
-University of California-Davis,59069,California
-University of Maryland College Park,57255,Maryland
-Princeton University,52929,New Jersey
-"Association of Universities for Research in Astronomy, Inc.",51675,District of Columbia
-North Carolina State University,51400,North Carolina
-Arizona State University,50481,Arizona
-Florida State University,49866,Florida
-Ohio State University,48862,Ohio
-University of California-Santa Barbara,46975,California
-University of Chicago,45017,Illinois
-Duke University,44633,North Carolina
-Northwestern University,43976,Illinois
-University of California-Irvine,41766,California
-Rutgers University New Brunswick,41626,New Jersey
-University of Southern California,41280,California
-Johns Hopkins University,40282,Maryland
-University of Massachusetts Amherst,39693,Massachusetts
-Incorporated Research Institutions for Seismology,39558,District of Columbia
-Virginia Polytechnic Institute and State University,38829,Virginia
-University of Pennsylvania,38366,Pennsylvania
-University of Utah,37232,Utah
+institution,grant_amt_thousands,state_or_country,latitude,longitude
+LOCKHEED MARTIN CORPORATION,156067,Maryland,38.9603766,-77.0848197
+"Consortium for Ocean Leadership, Inc",155565,District of Columbia,38.9071923,-77.0368707
+University of Illinois at Urbana-Champaign,153120,Illinois,40.1019523,-88.2271615
+University Corporation For Atmospheric Res,121958,Colorado,39.5500507,-105.7820674
+Cornell University,118327,New York,42.4534492,-76.4735027
+University of California-Berkeley,103897,California,37.8739132,-122.2505629
+University of Wisconsin-Madison,101973,Wisconsin,43.076592,-89.4124875
+University of Washington,96108,Washington,47.65533509999999,-122.3035199
+University of Michigan Ann Arbor,94272,Michigan,42.2780436,-83.7382241
+California Institute of Technology,88334,California,34.1376576,-118.125269
+"National Ecological Observatory Network, Inc",87291,Colorado,40.01650619999999,-105.2454729
+Department of Defense,87212,California,38.5791972,-121.4884316
+Purdue University,83139,Indiana,40.4237054,-86.92119459999999
+Columbia University,82143,New York,40.8075355,-73.9625727
+Carnegie-Mellon University,76082,Pennsylvania,40.4424925,-79.9425528
+University of California-San Diego,75455,California,32.8800604,-117.2340135
+Associated Universities Inc/National Radio Astronomy Observatory,73920,Virginia,37.4315734,-78.6568942
+Michigan State University,73417,Michigan,42.701848,-84.4821719
+University of Colorado at Boulder,73008,Colorado,40.00758099999999,-105.2659417
+Massachusetts Institute of Technology,72252,Massachusetts,42.360091,-71.09416
+University of Minnesota-Twin Cities,71680,Minnesota,44.97399,-93.2277285
+Georgia Tech Research Corporation,71260,Georgia,32.1656221,-82.9000751
+Woods Hole Oceanographic Institution,69408,Massachusetts,41.52422989999999,-70.67106940000001
+University of California-Los Angeles,69004,California,34.068921,-118.4451812
+University of Arizona,67940,Arizona,33.4522217,-112.0662126
+Stanford University,66113,California,37.4274745,-122.169719
+Harvard University,62305,Massachusetts,42.3770029,-71.11666009999999
+University of Texas at Austin,61585,Texas,30.28065429999999,-97.7327641
+Pennsylvania State Univ University Park,61325,Pennsylvania,40.796111,-77.86277799999999
+University of California-Davis,59069,California,38.5368041,-121.7489938
+University of Maryland College Park,57255,Maryland,38.9869183,-76.9425543
+Princeton University,52929,New Jersey,40.3439888,-74.6514481
+"Association of Universities for Research in Astronomy, Inc.",51675,District of Columbia,38.9071923,-77.0368707
+North Carolina State University,51400,North Carolina,35.7846633,-78.6820946
+Arizona State University,50481,Arizona,33.4242399,-111.9280527
+Florida State University,49866,Florida,30.4418778,-84.2984889
+Ohio State University,48862,Ohio,40.0141905,-83.03091429999999
+University of California-Santa Barbara,46975,California,34.4139629,-119.848947
+University of Chicago,45017,Illinois,41.7886079,-87.5987133
+Duke University,44633,North Carolina,36.0014258,-78.9382286
+Northwestern University,43976,Illinois,42.0564594,-87.67526699999999
+University of California-Irvine,41766,California,33.6404952,-117.8442962
+Rutgers University New Brunswick,41626,New Jersey,40.4786708,-74.43178929999999
+University of Southern California,41280,California,34.0223519,-118.285117
+Johns Hopkins University,40282,Maryland,39.3249281,-76.62335379999999
+University of Massachusetts Amherst,39693,Massachusetts,42.3911569,-72.5267121
+Incorporated Research Institutions for Seismology,39558,District of Columbia,38.9071923,-77.0368707
+Virginia Polytechnic Institute and State University,38829,Virginia,37.22838429999999,-80.42341669999999
+University of Pennsylvania,38366,Pennsylvania,39.9522188,-75.1932137
+University of Utah,37232,Utah,40.7649368,-111.8421021
