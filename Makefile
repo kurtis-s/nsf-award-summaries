@@ -1,5 +1,5 @@
 data/grants.csv: data/grants.html
-	python data/parsedata.py	
+	python $(dir $@)/parsedata.py $< $(dir $@)
 
 data/grants.html: data/getdata.py
-	python data/getdata.py $(dir $@)
+	python $(dir $@)/getdata.py $(dir $@)
