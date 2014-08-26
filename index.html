@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>NSF Awards by Institution</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+</head>
+<style>
+.state-boundary {
+  fill: none;
+  stroke: white;
+}
+</style>
+<body>
+<script>
+    var SHAPE_PATH = "shapes/us.json";
+    var GRANT_DATA_PATH = "data/grants.json";
+    var WIDTH = 960;
+    var HEIGHT = 500;
+
+    var projection = d3.geo.albersUsa()
+        .scale(1000)
+        .translate([WIDTH / 2, HEIGHT / 2]);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", WIDTH)
+        .attr("height", HEIGHT);
+
+    queue()
+        .defer(d3.json, SHAPE_PATH)
+        .defer(d3.json, GRANT_DATA_PATH)
+        .await(ready);
+
+function ready(error, us, grants) {
+  grants.sort(function(a,b) {return b.grant_amt_thousands - a.grant_amt_thousands});
+
+  var colorScale = d3.scale.linear()
+      .domain(d3.extent(grants, function(d) {return d.grant_amt_thousands}))
+      .range(["#FCFCFC", "blue"]);
+
+  var radiusScale = d3.scale.sqrt()
+      .domain(d3.extent(grants, function(d) {return d.grant_amt_thousands}))
+      .range([1, 50]);
+
+  svg.append("g")
+      .attr("class", "state-land")
+    .selectAll("path")
+      .data(topojson.feature(us, us.objects.us_geoJSON).features)
+    .enter().append("path")
+      .attr("d", path)
+      .style("fill", "#F8F8F8");
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.us_geoJSON, function(a, b) { return a.id !== b.id; }))
+      .attr("class", "state-boundary")
+      .attr("d", path);
+
+  svg.selectAll("circle").data(grants)
+      .enter()
+      .append("circle")
+          .attr("r", function(d) {return radiusScale(d.grant_amt_thousands)})
+          .attr("stroke", "black")
+          .attr("stroke-width", "1px")
+          .style("fill", function(d) {return colorScale(d.grant_amt_thousands)})
+          .style("opacity", .5)
+          .attr("transform", function(d) {
+            return "translate(" + projection([d.longitude, d.latitude]) + ")";
+          });
+}
+d3.select(self.frameElement).style("height", HEIGHT + "px");
+
+</script>

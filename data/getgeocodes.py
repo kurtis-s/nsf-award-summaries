@@ -15,11 +15,12 @@ grants['latitude'] = np.nan
 grants['longitude'] = np.nan
 
 geolocator = GoogleV3()
-for institution, series in grants.iterrows():
+for index, series in grants.iterrows():
     state = series['state_or_country']
+    institution = series['institution']
     location = geolocator.geocode(institution + ',' + state)
     sleep(0.1) #Make sure we don't go over Google API limit
-    grants.loc[institution, 'latitude'] = location.latitude
-    grants.loc[institution, 'longitude'] = location.longitude
+    grants.loc[index, 'latitude'] = location.latitude
+    grants.loc[index, 'longitude'] = location.longitude
 
 grants.to_pickle(os.path.join(args.outputdir, 'grants_geocoded.pkl'))

@@ -16,6 +16,5 @@ grant_data['state_or_country'] = [state.strip() for state in parsed_data.xpath('
 grant_data['grant_amt_thousands'] = [int(amt.strip().strip('$').replace(',', '')) for amt in parsed_data.xpath('//table/tbody/tr/td[3]/font/text()')]
 
 grant_frame = pd.DataFrame.from_dict(grant_data)
-grant_frame.set_index(['institution'], inplace=True)
 
 grant_frame.to_pickle(os.path.join(args.outputdir, 'grants_not_geocoded.pkl'))

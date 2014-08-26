@@ -8,5 +8,5 @@ parser.add_argument('outputdir', help='path to the output directory')
 args = parser.parse_args()
 
 grant_data = pd.read_pickle(args.inputfile)
-grant_data.to_json(os.path.join(args.outputdir, 'grants.json'), orient='index')
+grant_data.to_json(os.path.join(args.outputdir, 'grants.json'), orient='records')
 grant_data.to_csv(os.path.join(args.outputdir, 'grants.csv'))
