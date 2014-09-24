@@ -2,28 +2,15 @@
 <head>
     <meta charset="utf-8">
     <title>NSF Awards by Institution</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="topgrants.css" />
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
 </head>
 <style>
-.state-boundary {
-  fill: none;
-  stroke: white;
-}
-div.granttooltip {
-    position: absolute;
-    text-align: center;
-    padding: 2px;
-    background: white;
-    border: 0px;
-    pointer-events: none;
-    display: inline-block;
-    border-radius: 10px;
-    text-align: left;
-}
 </style>
 <body>
+<div class="wpd3-236-0"></div>
 <script>
     var SHAPE_PATH = "shapes/us.json";
     var GRANT_DATA_PATH = "data/grants.json";
@@ -31,7 +18,7 @@ div.granttooltip {
     var HEIGHT = 500;
     var MAX_BUBBLE_RADIUS = 25;
 
-    var grantToolTipDiv = d3.select("body").append("div")
+    var grantToolTipDiv = d3.select(".wpd3-236-0").append("div")
     .attr("class", "granttooltip")
     .style("opacity", 0);
 
@@ -74,7 +61,7 @@ function ready(error, us, grants) {
 
   svg.append("path")
       .datum(topojson.mesh(us, us.objects.us_geoJSON, function(a, b) { return a.id !== b.id; }))
-      .attr("class", "state-boundary")
+      .attr("class", "grant-state-boundary")
       .attr("d", path);
 
   svg.selectAll("circle").data(grants)
