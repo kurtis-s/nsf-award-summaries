@@ -1,6 +1,6 @@
 nsf-award-summaries
 ===================
-An interactive graphic showing the top grant receiving institutions from the National Science Foundation (NSF)
+An interactive graphic showing the top grant receiving institutions from the National Science Foundation (NSF). The graphic is hosted on [my blog](http://kshuler.com/blog/top-nsf-grant-receiving-institutions/)
 
 ![Top NSF Award Institutions](./screenshot.png?raw=true)
 
