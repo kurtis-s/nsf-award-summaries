@@ -82,7 +82,7 @@ function ready(error, us, grants) {
            .style("opacity", .9)
            //Convert the amount to a dollar formatted string
            var grantAmt = (1000*d.grant_amt_thousands).toString().replace(/\d(?=(\d{3})+$)/g, '$&,');
-           grantToolTipDiv.html(d.institution + "</br>$" + grantAmt)
+           grantToolTipDiv.html(d.institution + "<br/>$" + grantAmt)
            .style("left", d3.event.pageX + "px")
            .style("top", d3.event.pageY + "px");
        })
