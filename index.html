@@ -11,6 +11,17 @@
   fill: none;
   stroke: white;
 }
+div.granttooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    background: white;
+    border: 0px;
+    pointer-events: none;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: left;
+}
 </style>
 <body>
 <script>
@@ -19,6 +30,10 @@
     var WIDTH = 960;
     var HEIGHT = 500;
     var MAX_BUBBLE_RADIUS = 25;
+
+    var grantToolTipDiv = d3.select("body").append("div")
+    .attr("class", "granttooltip")
+    .style("opacity", 0);
 
     var projection = d3.geo.albersUsa()
         .scale(1000)
@@ -72,7 +87,22 @@ function ready(error, us, grants) {
           .style("opacity", .5)
           .attr("transform", function(d) {
             return "translate(" + projection([d.longitude, d.latitude]) + ")";
-          });
+          })
+       .on("mouseover", function(d) {
+           grantToolTipDiv.transition()
+           .duration(200)
+           .style("opacity", .9)
+           //Convert the amount to a dollar formatted string
+           var grantAmt = (1000*d.grant_amt_thousands).toString().replace(/\d(?=(\d{3})+$)/g, '$&,');
+           grantToolTipDiv.html(d.institution + "</br>$" + grantAmt)
+           .style("left", d3.event.pageX + "px")
+           .style("top", d3.event.pageY + "px");
+       })
+       .on("mouseout", function(d) {
+           grantToolTipDiv.transition()
+           .duration(200)
+           .style("opacity", 0);
+       });
 }
 d3.select(self.frameElement).style("height", HEIGHT + "px");
 
