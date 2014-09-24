@@ -10,7 +10,7 @@
 <style>
 </style>
 <body>
-<div class="wpd3-236-0"></div>
+<div id="nsf-grant-bubble-chart"></div>
 <script>
     var SHAPE_PATH = "shapes/us.json";
     var GRANT_DATA_PATH = "data/grants.json";
@@ -30,7 +30,7 @@
     var path = d3.geo.path()
         .projection(projection);
 
-    var svg = d3.select(".wpd3-236-0").append("svg")
+    var svg = d3.select("#nsf-grant-bubble-chart").append("svg")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
 
