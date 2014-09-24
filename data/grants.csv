@@ -1,10 +1,10 @@
 ,grant_amt_thousands,institution,state_or_country,latitude,longitude
-0,156067,LOCKHEED MARTIN CORPORATION,Maryland,38.9603766,-77.0848197
+0,156067,LOCKHEED MARTIN CORPORATION,Maryland,39.0457549,-76.64127119999999
 1,155565,"Consortium for Ocean Leadership, Inc",District of Columbia,38.9071923,-77.0368707
 2,153120,University of Illinois at Urbana-Champaign,Illinois,40.1019523,-88.2271615
 3,121958,University Corporation For Atmospheric Res,Colorado,39.5500507,-105.7820674
 4,118327,Cornell University,New York,42.4534492,-76.4735027
-5,103897,University of California-Berkeley,California,37.8739132,-122.2505629
+5,103897,University of California-Berkeley,California,37.8718992,-122.2585399
 6,101973,University of Wisconsin-Madison,Wisconsin,43.076592,-89.4124875
 7,96108,University of Washington,Washington,47.65533509999999,-122.3035199
 8,94272,University of Michigan Ann Arbor,Michigan,42.2780436,-83.7382241
@@ -49,3 +49,103 @@
 47,38829,Virginia Polytechnic Institute and State University,Virginia,37.22838429999999,-80.42341669999999
 48,38366,University of Pennsylvania,Pennsylvania,39.9522188,-75.1932137
 49,37232,University of Utah,Utah,40.7649368,-111.8421021
+50,36753,University of Hawaii,Hawaii,21.265594,-157.821789
+51,35508,Iowa State University,Iowa,42.0266187,-93.6464654
+52,33831,Colorado State University,Colorado,40.573436,-105.0865473
+53,33464,University of Florida,Florida,29.6436325,-82.3549302
+54,33420,Oregon State University,Oregon,44.5637806,-123.2794442
+55,33000,"Association of Universities for Research in Astronomy, Inc.",Arizona,34.0489281,-111.0937311
+56,32523,University of Delaware,Delaware,39.6779504,-75.7506114
+57,31434,University of North Carolina at Chapel Hill,North Carolina,35.9049122,-79.0469134
+58,30385,Indiana University,Indiana,39.1691355,-86.5149053
+59,29612,Yale University,Connecticut,41.3163244,-72.92234309999999
+60,29341,William Marsh Rice University,Texas,29.7173941,-95.40183119999999
+61,28724,Trustees of Boston University,Massachusetts,42.3494964,-71.061882
+62,27710,University of California-San Diego Scripps Inst of Oceanography,California,36.778261,-119.4179324
+63,27672,University of Alaska Fairbanks Campus,Alaska,64.8570673,-147.8231178
+64,26555,University of Pittsburgh,Pennsylvania,40.4443533,-79.960835
+65,26505,SUNY at Stony Brook,New York,40.9130215,-73.1235592
+66,25700,University of California-Santa Cruz,California,36.9913856,-122.0608718
+67,25267,University of California-Riverside,California,33.9737055,-117.3280644
+68,24901,Brown University,Rhode Island,41.8267769,-71.4025557
+69,24672,SRI International,California,37.4541817,-122.1725207
+70,24497,Raytheon BBN Technologies Corp.,Massachusetts,42.4072107,-71.3824374
+71,24221,SUNY at Buffalo,New York,42.95386269999999,-78.815918
+72,24098,University of Maine,Maine,44.897732,-68.66870759999999
+73,23638,University of Georgia Research Foundation Inc,Georgia,32.1656221,-82.9000751
+74,22944,Rensselaer Polytechnic Institute,New York,42.730172,-73.6788026
+75,22568,University of New Mexico,New Mexico,35.0843187,-106.6197812
+76,22317,University of New Hampshire,New Hampshire,43.138948,-70.9370252
+77,21950,Vanderbilt University,Tennessee,36.1447034,-86.8026551
+78,21664,University of Virginia Main Campus,Virginia,37.2264217,-80.4255651
+79,21477,University of Notre Dame,Indiana,41.7055716,-86.2353388
+80,21476,University of Nebraska-Lincoln,Nebraska,40.7895543,-96.7012424
+81,20823,University of Tennessee Knoxville,Tennessee,35.9544013,-83.92945639999999
+82,20138,New York University,New York,40.72951339999999,-73.9964609
+83,19467,University of Connecticut,Connecticut,41.8077414,-72.2539805
+84,19398,Louisiana State University & Agricultural and Mechanical College,Louisiana,30.9842977,-91.96233269999999
+85,19113,University of Idaho,Idaho,46.7288124,-117.0126084
+86,18977,Washington University,Missouri,38.6487895,-90.31079620000001
+87,18928,Texas Engineering Experiment Station,Texas,30.561542,-96.25320699999999
+88,18512,University of Illinois at Chicago,Illinois,41.8700726,-87.6716747
+89,18396,Northeastern University,Massachusetts,42.3398067,-71.0891717
+90,18138,University of Rhode Island,Rhode Island,41.4863755,-71.5317118
+91,18119,University of Wyoming,Wyoming,41.3130972,-105.5796706
+92,17965,Washington State University,Washington,46.7319374,-117.1544219
+93,17843,Texas A&M University Main Campus,Texas,30.615674,-96.33572559999999
+94,16878,Tufts University,Massachusetts,42.4074843,-71.1190232
+95,16865,Utah State University,Utah,41.745161,-111.8097425
+96,15834,"UNAVCO, Inc.",Colorado,39.5500507,-105.7820674
+97,15822,Kansas State University,Kansas,39.1974437,-96.5847249
+98,15192,Case Western Reserve University,Ohio,41.5043413,-81.6083838
+99,14493,University of Missouri-Columbia,Missouri,38.9403808,-92.32773750000001
+100,14459,Syracuse University,New York,43.0391534,-76.1351158
+101,14312,National Opinion Research Center,Illinois,40.6331249,-89.3985283
+102,14176,Clemson University,South Carolina,34.6774642,-82.83619139999999
+103,14005,University of Kansas Center for Research Inc,Kansas,38.9515817,-95.2656071
+104,13495,Emory University,Georgia,33.7925195,-84.32399889999999
+105,13459,Montana State University,Montana,45.667565,-111.049354
+106,13193,Drexel University,Pennsylvania,39.9566127,-75.18994409999999
+107,13090,University of Central Florida,Florida,28.6024276,-81.2000599
+108,12469,University of Iowa,Iowa,41.6626963,-91.5548998
+109,12406,National Academy of Sciences,District of Columbia,38.893023,-77.0477267
+110,12055,University of South Florida,Florida,28.0587031,-82.41385389999999
+111,11918,University of South Carolina at Columbia,South Carolina,32.3021302,-80.9939751
+112,11554,Temple University,Pennsylvania,39.9820942,-75.1546786
+113,11535,Education Development Center,Massachusetts,42.4072107,-71.3824374
+114,11406,University of Kentucky Research Foundation,Kentucky,38.0349684,-84.5048082
+115,11399,Dartmouth College,New Hampshire,43.7044406,-72.2886934
+116,11304,University of Rochester,New York,43.1305531,-77.6260033
+117,10837,University of Miami Rosenstiel School of Marine&Atmospheric Sci,Florida,27.6648274,-81.5157535
+118,10765,University of Oklahoma Norman Campus,Oklahoma,35.2058936,-97.4457137
+119,10587,University of Vermont & State Agricultural College,Vermont,44.5588028,-72.57784149999999
+120,10539,Florida International University,Florida,25.9090688,-80.1399563
+121,10283,University of Oregon Eugene,Oregon,44.0448302,-123.0726055
+122,10238,University of Houston,Texas,29.7199489,-95.3422334
+123,10148,Oklahoma State University,Oklahoma,36.1270236,-97.07372219999999
+124,9968,University of Wisconsin-Milwaukee,Wisconsin,43.078263,-87.8819686
+125,9494,Auburn University,Alabama,32.5933574,-85.4951663
+126,9413,Mississippi State University,Mississippi,33.4555279,-88.7903868
+127,9321,Lehigh University,Pennsylvania,40.6069087,-75.37828320000001
+128,9316,Rochester Institute of Tech,New York,40.7127837,-74.0059413
+129,9239,North Carolina Agricultural & Technical State University,North Carolina,35.7595731,-79.01929969999999
+130,9197,George Mason University,Virginia,38.8321941,-77.308037
+131,9146,Worcester Polytechnic Institute,Massachusetts,42.2738556,-71.8059756
+132,9142,George Washington University,District of Columbia,38.8997145,-77.0485992
+133,8903,Boston College,Massachusetts,42.3355488,-71.16849450000001
+134,8766,University of Toledo,Ohio,41.6621416,-83.6126979
+135,8633,University of Arkansas,Arkansas,36.0678324,-94.17365509999999
+136,8554,Department of Interior,District of Columbia,38.8944866,-77.04256219999999
+137,8542,University of Texas at Arlington,Texas,32.7304682,-97.11477389999999
+138,8539,Tuskegee University,Alabama,32.4318094,-85.7063946
+139,8405,University of California-San Francisco,California,37.7716141,-122.4258437
+140,8320,University of Massachusetts Boston,Massachusetts,42.312449,-71.0359052
+141,8187,Michigan Technological University,Michigan,47.1170514,-88.54453149999999
+142,8165,Colorado School of Mines,Colorado,39.7512306,-105.2226523
+143,8147,CUNY City College,New York,40.578349,-73.934465
+144,8138,University of Texas at El Paso,Texas,31.7730893,-106.5057332
+145,8017,University of North Carolina at Charlotte,North Carolina,35.3075696,-80.72855229999999
+146,7984,West Virginia University Research Corporation,West Virginia,39.657096,-79.955263
+147,7924,Howard University,District of Columbia,38.9226843,-77.0194377
+148,7852,University of Alabama Tuscaloosa,Alabama,33.2140233,-87.5391418
+149,7705,University of Maryland Baltimore County,Maryland,39.2561164,-76.7107494

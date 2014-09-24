@@ -15,6 +15,16 @@ s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/default.asp')
 s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/buttons.asp')
 s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/bottom.asp')
 s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/options.asp')
+s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/TopInst.asp')
+params= {
+        'Continue': 'View Report',
+        'DrillDirInfo': 'NSF',
+        'FDrillDirInfo': 'NSF',
+        'FY_LOW': '2013',
+        'MAXROWS': '150',
+        'PERTYPE': 'All'
+        }
+s.post('http://dellweb.bfa.nsf.gov/Top50Inst2/bottom.asp', data=params)
 
 r = s.get('http://dellweb.bfa.nsf.gov/Top50Inst2/TopInst.asp')
 with open(os.path.join(args.outpath, 'grants.html'), 'w') as fp:
