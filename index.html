@@ -14,8 +14,9 @@
 <script>
     var SHAPE_PATH = "shapes/us.json";
     var GRANT_DATA_PATH = "data/grants.json";
-    var WIDTH = 960;
-    var HEIGHT = 500;
+    var WIDTH = 700;
+    var HEIGHT = 390;
+    var PROJECTION_SCALE = 780;
     var MAX_BUBBLE_RADIUS = 25;
 
     var grantToolTipDiv = d3.select(".wpd3-236-0").append("div")
@@ -23,7 +24,7 @@
     .style("opacity", 0);
 
     var projection = d3.geo.albersUsa()
-        .scale(1000)
+        .scale(PROJECTION_SCALE)
         .translate([WIDTH / 2, HEIGHT / 2]);
 
     var path = d3.geo.path()
