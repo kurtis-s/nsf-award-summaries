@@ -19,7 +19,7 @@
     var PROJECTION_SCALE = 780;
     var MAX_BUBBLE_RADIUS = 25;
 
-    var grantToolTipDiv = d3.select(".wpd3-236-0").append("div")
+    var grantToolTipDiv = d3.select("body").append("div")
     .attr("class", "granttooltip")
     .style("opacity", 0);
 
@@ -30,7 +30,7 @@
     var path = d3.geo.path()
         .projection(projection);
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select(".wpd3-236-0").append("svg")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
 
