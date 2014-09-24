@@ -6,7 +6,7 @@ An interactive graphic showing the top grant receiving institutions from the Nat
 
 Source: [Budget Internet Information System](http://dellweb.bfa.nsf.gov/)
 
-Dependencies for chart generation:
+Dependencies for chart generation:  
 [geopy](https://github.com/geopy/geopy)  
 [Pandas](http://pandas.pydata.org/)  
 [Requests](http://docs.python-requests.org/en/latest/)  
