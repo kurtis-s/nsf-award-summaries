@@ -58,7 +58,7 @@ function ready(error, us, grants) {
       .data(topojson.feature(us, us.objects.us_geoJSON).features)
     .enter().append("path")
       .attr("d", path)
-      .style("fill", "#F8F8F8");
+      .style("fill", "#DDDDDD");
 
   svg.append("path")
       .datum(topojson.mesh(us, us.objects.us_geoJSON, function(a, b) { return a.id !== b.id; }))
