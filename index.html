@@ -12,86 +12,87 @@
 <body>
 <div id="nsf-grant-bubble-chart"></div>
 <script>
-    var SHAPE_PATH = "shapes/us.json";
-    var GRANT_DATA_PATH = "data/grants.json";
-    var WIDTH = 700;
-    var HEIGHT = 390;
-    var PROJECTION_SCALE = 780;
-    var MAX_BUBBLE_RADIUS = 25;
+(function () {
+  var SHAPE_PATH = "shapes/us.json";
+  var GRANT_DATA_PATH = "data/grants.json";
+  var WIDTH = 700;
+  var HEIGHT = 390;
+  var PROJECTION_SCALE = 780;
+  var MAX_BUBBLE_RADIUS = 25;
 
-    var grantToolTipDiv = d3.select("body").append("div")
-    .attr("class", "granttooltip")
-    .style("opacity", 0);
+  var grantToolTipDiv = d3.select("body").append("div")
+      .attr("class", "granttooltip")
+      .style("opacity", 0);
 
-    var projection = d3.geo.albersUsa()
-        .scale(PROJECTION_SCALE)
-        .translate([WIDTH / 2, HEIGHT / 2]);
+  var projection = d3.geo.albersUsa()
+      .scale(PROJECTION_SCALE)
+      .translate([WIDTH / 2, HEIGHT / 2]);
 
-    var path = d3.geo.path()
-        .projection(projection);
+  var path = d3.geo.path()
+      .projection(projection);
 
-    var svg = d3.select("#nsf-grant-bubble-chart").append("svg")
-        .attr("width", WIDTH)
-        .attr("height", HEIGHT);
+  var svg = d3.select("#nsf-grant-bubble-chart").append("svg")
+      .attr("width", WIDTH)
+      .attr("height", HEIGHT);
 
-    queue()
-        .defer(d3.json, SHAPE_PATH)
-        .defer(d3.json, GRANT_DATA_PATH)
-        .await(ready);
+  queue()
+      .defer(d3.json, SHAPE_PATH)
+      .defer(d3.json, GRANT_DATA_PATH)
+      .await(ready);
 
-function ready(error, us, grants) {
-  grants.sort(function(a,b) {return b.grant_amt_thousands - a.grant_amt_thousands});
-  var maxGrant = d3.max(grants, function(d) {return d.grant_amt_thousands});
-  var minGrant = d3.min(grants, function(d) {return d.grant_amt_thousands});
-
-  var colorScale = d3.scale.linear()
-      .domain([minGrant, maxGrant])
-      .range(["#FCFCFC", "blue"]);
-
-  var radiusScale = d3.scale.sqrt()
-      .domain([0, maxGrant])
-      .range([0, MAX_BUBBLE_RADIUS]);
-
-  svg.append("g")
-      .attr("class", "state-land")
-    .selectAll("path")
-      .data(topojson.feature(us, us.objects.us_geoJSON).features)
-    .enter().append("path")
-      .attr("d", path)
-      .style("fill", "#DDDDDD");
-
-  svg.append("path")
-      .datum(topojson.mesh(us, us.objects.us_geoJSON, function(a, b) { return a.id !== b.id; }))
-      .attr("class", "grant-state-boundary")
-      .attr("d", path);
-
-  svg.selectAll("circle").data(grants)
-      .enter()
-      .append("circle")
-          .attr("r", function(d) {return radiusScale(d.grant_amt_thousands)})
-          .attr("stroke", "black")
-          .attr("stroke-width", "1px")
-          .style("fill", function(d) {return colorScale(d.grant_amt_thousands)})
-          .style("opacity", .5)
-          .attr("transform", function(d) {
-            return "translate(" + projection([d.longitude, d.latitude]) + ")";
-          })
-       .on("mouseover", function(d) {
-           grantToolTipDiv.transition()
-           .duration(200)
-           .style("opacity", .9)
-           //Convert the amount to a dollar formatted string
-           var grantAmt = (1000*d.grant_amt_thousands).toString().replace(/\d(?=(\d{3})+$)/g, '$&,');
-           grantToolTipDiv.html(d.institution + "<br/>$" + grantAmt)
-           .style("left", d3.event.pageX + "px")
-           .style("top", d3.event.pageY + "px");
-       })
-       .on("mouseout", function(d) {
-           grantToolTipDiv.transition()
-           .duration(200)
-           .style("opacity", 0);
-       });
-}
-d3.select(self.frameElement).style("height", HEIGHT + "px");
-
+  function ready(error, us, grants) {
+    grants.sort(function(a,b) {return b.grant_amt_thousands - a.grant_amt_thousands});
+    var maxGrant = d3.max(grants, function(d) {return d.grant_amt_thousands});
+    var minGrant = d3.min(grants, function(d) {return d.grant_amt_thousands});
+  
+    var colorScale = d3.scale.linear()
+        .domain([minGrant, maxGrant])
+        .range(["#FCFCFC", "blue"]);
+  
+    var radiusScale = d3.scale.sqrt()
+        .domain([0, maxGrant])
+        .range([0, MAX_BUBBLE_RADIUS]);
+  
+    svg.append("g")
+        .attr("class", "state-land")
+      .selectAll("path")
+        .data(topojson.feature(us, us.objects.us_geoJSON).features)
+      .enter().append("path")
+        .attr("d", path)
+        .style("fill", "#DDDDDD");
+  
+    svg.append("path")
+        .datum(topojson.mesh(us, us.objects.us_geoJSON, function(a, b) { return a.id !== b.id; }))
+        .attr("class", "grant-state-boundary")
+        .attr("d", path);
+  
+    svg.selectAll("circle").data(grants)
+        .enter()
+        .append("circle")
+            .attr("r", function(d) {return radiusScale(d.grant_amt_thousands)})
+            .attr("stroke", "black")
+            .attr("stroke-width", "1px")
+            .style("fill", function(d) {return colorScale(d.grant_amt_thousands)})
+            .style("opacity", .5)
+            .attr("transform", function(d) {
+              return "translate(" + projection([d.longitude, d.latitude]) + ")";
+            })
+         .on("mouseover", function(d) {
+             grantToolTipDiv.transition()
+             .duration(200)
+             .style("opacity", .9)
+             //Convert the amount to a dollar formatted string
+             var grantAmt = (1000*d.grant_amt_thousands).toString().replace(/\d(?=(\d{3})+$)/g, '$&,');
+             grantToolTipDiv.html(d.institution + "<br/>$" + grantAmt)
+             .style("left", d3.event.pageX + "px")
+             .style("top", d3.event.pageY + "px");
+         })
+         .on("mouseout", function(d) {
+             grantToolTipDiv.transition()
+             .duration(200)
+             .style("opacity", 0);
+         });
+  }
+  d3.select(self.frameElement).style("height", HEIGHT + "px");
+}());  
 </script>
